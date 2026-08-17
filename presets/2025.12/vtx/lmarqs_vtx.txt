@@ -1,0 +1,60 @@
+#$ TITLE: lmarqs VTX
+#$ FIRMWARE_VERSION: 4.3
+#$ FIRMWARE_VERSION: 4.4
+#$ FIRMWARE_VERSION: 4.5
+#$ FIRMWARE_VERSION: 2025.12
+#$ CATEGORY: VTX
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: vtx, vtxtable, smartaudio, power, zeus, HGLRC, rush, rushfpv, tank, lmarqs
+#$ AUTHOR: lmarqs
+#$ DESCRIPTION: VTX table plus in-flight power switching on the AUX6 dial.
+#$ DESCRIPTION: Pick the model matching your video transmitter, then use AUX6
+#$ DESCRIPTION: to select one of its four power levels while flying.
+#$ DESCRIPTION: Defaults to RACEBAND channel 2 (R2, 5695 MHz). The dial moves
+#$ DESCRIPTION: power only, leaving band and channel where you set them.
+#$ DISCLAIMER: Only select one VTX model. All previous VTX table settings will be reset.
+#$ INCLUDE_DISCLAIMER: misc/disclaimer/en/vtxtable.txt
+
+#$ INCLUDE: presets/4.3/vtx/defaults_vtx_tables.txt
+
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+
+vtxtable powerlevels 4
+
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) VTX model
+
+    #$ OPTION BEGIN (UNCHECKED): HGLRC Zeus Nano
+        vtxtable powervalues 14 20 23 26
+        vtxtable powerlabels 25 100 200 400
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): RushFPV Tiny Tank
+        vtxtable powervalues 14 20 23 25
+        vtxtable powerlabels 25 100 200 350
+    #$ OPTION END
+
+    #$ OPTION BEGIN (CHECKED): RushFPV Tank Ultimate Plus/Mini/II
+        vtxtable powervalues 14 23 27 29
+        vtxtable powerlabels 25 200 500 800
+    #$ OPTION END
+
+#$ OPTION_GROUP END
+
+# Default channel R2 (5695 MHz) — RACEBAND is band 5 in the table above.
+# Betaflight derives vtx_freq from band/channel on init, so it is not set here.
+set vtx_band = 5
+set vtx_channel = 2
+
+# Power switching on the AUX6 dial (aux index 5). Band and channel are set to 0
+# so only power changes — Betaflight locks band/channel once armed but leaves
+# power writable, which is what makes this work in flight.
+vtx 0 5 0 0 1  900 1200
+vtx 1 5 0 0 2 1200 1500
+vtx 2 5 0 0 3 1500 1800
+vtx 3 5 0 0 4 1800 2100

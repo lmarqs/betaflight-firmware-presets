@@ -1,0 +1,128 @@
+#$ TITLE: lmarqs OSD
+#$ FIRMWARE_VERSION: 4.3
+#$ FIRMWARE_VERSION: 4.4
+#$ FIRMWARE_VERSION: 4.5
+#$ FIRMWARE_VERSION: 2025.12
+#$ CATEGORY: OSD
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: OSD, analog, NTSC, PAL, alarms, warnings, RSSI, link quality, battery, vbat, ELRS, lmarqs
+#$ AUTHOR: lmarqs
+
+#$ DESCRIPTION: Custom OSD for the lmarqs build.
+#$ DESCRIPTION: Supports NTSC (30x13), PAL (30x16), and AUTO video systems.
+#$ DESCRIPTION: Select your video system, then pick the matching canvas size
+#$ DESCRIPTION: (or "Skip" on Betaflight 2025.12, which removed osd_canvas_*).
+#$ DESCRIPTION: Link warnings are enabled: pick your ELRS packet rate to set the
+#$ DESCRIPTION: matching RSSI dBm alarm. Link quality alarm is 80% on every rate.
+#$ DESCRIPTION: Battery alarms: 3.60V per cell raises LOW BATTERY,
+#$ DESCRIPTION: 3.50V per cell raises LAND NOW.
+#$ WARNING: This preset also sets battery cell voltage thresholds, which drive the beeper as well as the OSD. They are tighter than the Betaflight defaults of 3.50V / 3.30V and will trigger on voltage sag under throttle.
+
+# OSD alarms and stats (common to all video systems)
+# Bitmask enables the RSSI_DBM (bit 14) and LINK_QUALITY (bit 13) warnings,
+# both of which Betaflight ships disabled — without them the thresholds below
+# never display anything.
+set osd_warn_bitmask = 321535
+set osd_link_quality_alarm = 80
+set osd_stat_bitmask = 163692
+set osd_displayport_device = AUTO
+
+# The RSSI dBm alarm tracks receiver sensitivity, which falls as the packet
+# rate rises — pick the option matching the ELRS rate actually in use.
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) ELRS packet rate
+
+    #$ OPTION BEGIN (UNCHECKED): 100Hz Full Res
+        set osd_rssi_dbm_alarm = -103
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): 150Hz
+        set osd_rssi_dbm_alarm = -102
+    #$ OPTION END
+
+    #$ OPTION BEGIN (CHECKED): 250Hz
+        set osd_rssi_dbm_alarm = -98
+    #$ OPTION END
+
+#$ OPTION_GROUP END
+
+# Battery alarms — cell voltages are in 0.01V units
+set vbat_warning_cell_voltage = 360
+set vbat_min_cell_voltage = 350
+
+# Top-of-screen elements (same position on all video systems)
+set osd_rssi_pos = 56
+set osd_link_quality_pos = 2103
+set osd_rssi_dbm_pos = 2135
+set osd_vtx_channel_pos = 2081
+set osd_camera_frame_pos = 36
+
+# Mid-screen elements
+set osd_flip_arrow_pos = 2222
+
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Video System
+
+    #$ OPTION BEGIN (CHECKED): NTSC (30x13)
+        set vcd_video_system = NTSC
+        set osd_crosshairs_pos = 173
+        set osd_tim_2_pos = 2337
+        set osd_disarmed_pos = 331
+        set osd_avg_cell_voltage_pos = 2369
+        set osd_ready_mode_pos = 2380
+        set osd_throttle_pos = 2392
+        set osd_flymode_pos = 2401
+        set osd_craft_name_pos = 2412
+        set osd_g_force_pos = 2424
+        set osd_warnings_pos = 14633
+        set osd_altitude_pos = 18744
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): PAL (30x16)
+        set vcd_video_system = PAL
+        set osd_crosshairs_pos = 237
+        set osd_tim_2_pos = 2433
+        set osd_disarmed_pos = 427
+        set osd_avg_cell_voltage_pos = 2465
+        set osd_ready_mode_pos = 2476
+        set osd_throttle_pos = 2488
+        set osd_flymode_pos = 2497
+        set osd_craft_name_pos = 2508
+        set osd_g_force_pos = 2520
+        set osd_warnings_pos = 14729
+        set osd_altitude_pos = 18840
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): AUTO
+        set vcd_video_system = AUTO
+        set osd_crosshairs_pos = 173
+        set osd_tim_2_pos = 2337
+        set osd_disarmed_pos = 331
+        set osd_avg_cell_voltage_pos = 2369
+        set osd_ready_mode_pos = 2380
+        set osd_throttle_pos = 2392
+        set osd_flymode_pos = 2401
+        set osd_craft_name_pos = 2412
+        set osd_g_force_pos = 2424
+        set osd_warnings_pos = 14633
+        set osd_altitude_pos = 18744
+    #$ OPTION END
+
+#$ OPTION_GROUP END
+
+# Canvas size — split from video-system group because osd_canvas_* keys were
+# removed from production Betaflight 2025.12 builds (still present in 4.4/4.5).
+#$ OPTION_GROUP BEGIN: (EXCLUSIVE) Canvas size (4.3 / 4.4 / 4.5 only — Skip on 2025.12)
+
+    #$ OPTION BEGIN (CHECKED): NTSC canvas 30x13
+        set osd_canvas_width = 30
+        set osd_canvas_height = 13
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): PAL canvas 30x16
+        set osd_canvas_width = 30
+        set osd_canvas_height = 16
+    #$ OPTION END
+
+    #$ OPTION BEGIN (UNCHECKED): Skip (Betaflight 2025.12)
+    #$ OPTION END
+
+#$ OPTION_GROUP END

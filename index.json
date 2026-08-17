@@ -135,6 +135,7 @@
   "uniqueValues": {
     "firmware_version": [
       "2025.12",
+      "2026.6",
       "3.5",
       "4.2",
       "4.3",
@@ -156,6 +157,7 @@
     "author": [
       "Alex Campbell (Chief)",
       "Alex Vanover",
+      "andybrwr",
       "antonig",
       "Armando Gallegos (Mondo)",
       "AyyyKayyy - Anthony Knight",
@@ -179,6 +181,7 @@
       "Foxeer Harvey",
       "FPV_Cam",
       "FPVian",
+      "Funkolius",
       "Garban",
       "Grey pang",
       "IllusionFpv",
@@ -192,6 +195,8 @@
       "Jye Smith",
       "KMfpv",
       "LeadFingers",
+      "lmarqs",
+      "Michael-GGG",
       "MinChan Kim",
       "mouseFPV",
       "MrAlucardDante",
@@ -226,8 +231,12 @@
       "166Hz",
       "1ms",
       "1S",
+      "2 in",
+      "2 inch",
+      "2.2 inch prop",
       "2.5in",
       "2.5W",
+      "2\"",
       "20",
       "2022",
       "2023",
@@ -260,7 +269,7 @@
       "4S",
       "5",
       "5 In",
-      "5 inch",
+      "5 Inch",
       "5.5",
       "5\"",
       "500Hz",
@@ -299,12 +308,15 @@
       "air65",
       "air75",
       "akk",
+      "alarms",
       "AlexFPV",
       "analog",
+      "angle",
       "antonig",
       "aos",
       "AOS T3",
       "Apex",
+      "arm",
       "Audio TBS",
       "AutoSelect",
       "aux",
@@ -314,6 +326,7 @@
       "bardwell",
       "basher",
       "basic",
+      "battery",
       "beginner",
       "betaflight",
       "betafpv",
@@ -330,6 +343,8 @@
       "camera",
       "camera_control",
       "Cgo",
+      "champ",
+      "champ2",
       "Chief",
       "chris",
       "cine",
@@ -373,12 +388,14 @@
       "divimath",
       "DJI",
       "dominator",
+      "DP",
       "DShot telemetry",
       "eachine",
       "ELRS",
       "emax",
       "EVO",
       "expert",
+      "expo",
       "express",
       "Extreme",
       "factory",
@@ -395,14 +412,16 @@
       "FPVCycle",
       "FPVCycle TP3",
       "fpvian",
+      "frame",
       "freedom",
       "freedom spec",
       "FreedomSpec",
-      "Freestyle",
+      "freestyle",
       "freesytle",
       "freetyle",
       "FreshBread",
       "frsky",
+      "Funkolius",
       "fx2",
       "Garban",
       "geprc",
@@ -419,13 +438,17 @@
       "HDOSD",
       "HDZERO",
       "Headsup",
+      "HGLRC",
       "HighKV",
+      "horizon",
       "hot",
       "HS5",
       "HV",
       "IllusionFpv",
       "immersion",
       "immersionRC",
+      "impetus",
+      "impetus 2",
       "ImpulseRC",
       "IRC",
       "IRC Tramp",
@@ -444,7 +467,9 @@
       "leds",
       "limon",
       "link",
+      "link quality",
       "Llama",
+      "lmarqs",
       "log",
       "logging",
       "Long Range",
@@ -456,6 +481,7 @@
       "mck",
       "meteor",
       "MGP",
+      "micro",
       "MinChan",
       "MM",
       "mode",
@@ -484,19 +510,24 @@
       "no rpm",
       "noisy",
       "Normal",
+      "NTSC",
       "O3 & O4",
       "O3 air unit",
       "Omni",
       "openracer",
       "OpenVTx",
       "OSD",
+      "oxbt",
       "ozr",
+      "PAL",
       "panda",
       "pandarc",
       "partial",
       "Passthrough",
       "pid",
       "PIDtoolbox",
+      "power",
+      "prearm",
       "pro32",
       "profile",
       "Protos",
@@ -524,6 +555,7 @@
       "reset statistics",
       "rosser",
       "rpm",
+      "RSSI",
       "rubberquads",
       "rush",
       "rush tank",
@@ -573,6 +605,7 @@
       "switch",
       "SWPR",
       "T3",
+      "tank",
       "tank solo",
       "tank ultimate",
       "TBS",
@@ -611,6 +644,7 @@
       "utility",
       "UWL",
       "vanover",
+      "vbat",
       "very",
       "very clean",
       "very noisy",
@@ -626,6 +660,7 @@
       "vtx table",
       "vtxtable",
       "Walksnail",
+      "warnings",
       "whoop",
       "whoop lite",
       "whooptopia",
@@ -633,6 +668,7 @@
       "wtfos",
       "YAROSFPV",
       "youtube",
+      "zeus",
       "zoe",
       "zoeFPV"
     ]
@@ -1027,6 +1063,31 @@
       "priority": 100
     },
     {
+      "fullPath": "presets/2025.12/modes/lmarqs_modes.txt",
+      "hash": "134d754700798892afb7843dead566d0742672b0fb859886bad0238869e4a5c0",
+      "title": "lmarqs Modes",
+      "firmware_version": [
+        "4.3",
+        "4.4",
+        "4.5",
+        "2025.12"
+      ],
+      "category": "MODES",
+      "status": "COMMUNITY",
+      "keywords": [
+        "modes",
+        "aux",
+        "switch",
+        "arm",
+        "angle",
+        "horizon",
+        "prearm",
+        "lmarqs"
+      ],
+      "author": "lmarqs",
+      "priority": 0
+    },
+    {
       "fullPath": "presets/2025.12/osd/FaderFPV_DJI.txt",
       "hash": "70e7f9fcda229496c68e8a0361a7ab5cff2f2eb2370d94d71b214d7d3e6e14c8",
       "title": "Nicholas Young DJI OSD",
@@ -1126,6 +1187,35 @@
         "OSD"
       ],
       "author": "Betaflight",
+      "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/osd/lmarqs_osd.txt",
+      "hash": "9355889c09c389aba728c2b4762b0cc6eb82b4696c782432e83e948f9bdfd9e0",
+      "title": "lmarqs OSD",
+      "firmware_version": [
+        "4.3",
+        "4.4",
+        "4.5",
+        "2025.12"
+      ],
+      "category": "OSD",
+      "status": "COMMUNITY",
+      "keywords": [
+        "OSD",
+        "analog",
+        "NTSC",
+        "PAL",
+        "alarms",
+        "warnings",
+        "RSSI",
+        "link quality",
+        "battery",
+        "vbat",
+        "ELRS",
+        "lmarqs"
+      ],
+      "author": "lmarqs",
       "priority": 0
     },
     {
@@ -1239,6 +1329,28 @@
       ],
       "author": "Betaflight",
       "priority": 0
+    },
+    {
+      "fullPath": "presets/2025.12/rates/lmarqs_rates.txt",
+      "hash": "e75f85d99f9cea6866ab12456a699c4f11428bfb3deb7237b646bc7f0a6f2795",
+      "title": "lmarqs Rates",
+      "firmware_version": [
+        "4.3",
+        "4.4",
+        "4.5",
+        "2025.12"
+      ],
+      "category": "RATES",
+      "status": "COMMUNITY",
+      "keywords": [
+        "rates",
+        "actual",
+        "expo",
+        "freestyle",
+        "lmarqs"
+      ],
+      "author": "lmarqs",
+      "priority": 10000
     },
     {
       "fullPath": "presets/2025.12/rc_link/defaults.txt",
@@ -2155,6 +2267,31 @@
       "priority": 10000000000
     },
     {
+      "fullPath": "presets/2025.12/tune/Funkolius_Impetus_Frame.txt",
+      "hash": "3cf8a63e7cd2b74ceb1bd1ad023c32dcd8d1757584223a5e883018bffffac5b4",
+      "title": "Funkolius - Impetus 2 Frame",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "freestyle",
+        "impetus 2",
+        "impetus",
+        "micro",
+        "2 inch",
+        "2 in",
+        "2\"",
+        "2.2 inch prop",
+        "frame",
+        "Funkolius"
+      ],
+      "author": "Funkolius",
+      "force_options_review": false,
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/2025.12/tune/aos_rc/aos_3.5_tune.txt",
       "hash": "07b06b140fed022fa69c6c2438cf37677e5c43fbd1f960fb4f55bec1dfa5661b",
       "title": "AOS 3.5 tune by Chris Rosser",
@@ -2587,6 +2724,29 @@
       "priority": 1000000000000
     },
     {
+      "fullPath": "presets/2025.12/tune/basher_jazzmutant_tune.txt",
+      "hash": "aa910f580d1c6c8c339f31ab8f258b77f24a8fd9bf04861bbfc8ef6d3edef544",
+      "title": "Basher 5\" 6S by JazzMutant",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "EXPERIMENTAL",
+      "keywords": [
+        "basher",
+        "freestyle",
+        "5 Inch",
+        "5 In",
+        "5\"",
+        "recopter",
+        "bando",
+        "JazzMutant"
+      ],
+      "author": "JazzMutant",
+      "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
       "fullPath": "presets/2025.12/tune/blackbird_nextlevel.txt",
       "hash": "53ea94140986c7e43f7b7fb92b9d0f7d342de6c6949bb75788953a11c2242dba",
       "title": "Black Bird FPV | Next Level",
@@ -2698,6 +2858,26 @@
       ],
       "author": "JazzMutant",
       "force_options_review": true,
+      "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/tune/oxbt_champ2_factory.txt",
+      "hash": "7e846d80319d8af7b53f61f2a7b494f9d2babfe26e7e36aca0732cd2ed6a86c3",
+      "title": "OXBT CHAMP2 Factory Preset",
+      "firmware_version": [
+        "2025.12"
+      ],
+      "category": "TUNE",
+      "status": "COMMUNITY",
+      "keywords": [
+        "oxbt",
+        "champ2",
+        "champ",
+        "factory",
+        "pid",
+        "tune"
+      ],
+      "author": "Michael-GGG",
       "priority": 1000000000000
     },
     {
@@ -3012,6 +3192,33 @@
       ],
       "author": "UAV Tech (Mark Spatz)",
       "priority": 1000000000000
+    },
+    {
+      "fullPath": "presets/2025.12/vtx/lmarqs_vtx.txt",
+      "hash": "84f640db8a1cc6d92c6be2c6e315d361a7af2e98a1222e853ea9903e6e8e89dd",
+      "title": "lmarqs VTX",
+      "firmware_version": [
+        "4.3",
+        "4.4",
+        "4.5",
+        "2025.12"
+      ],
+      "category": "VTX",
+      "status": "COMMUNITY",
+      "keywords": [
+        "vtx",
+        "vtxtable",
+        "smartaudio",
+        "power",
+        "zeus",
+        "HGLRC",
+        "rush",
+        "rushfpv",
+        "tank",
+        "lmarqs"
+      ],
+      "author": "lmarqs",
+      "priority": 1000000
     },
     {
       "fullPath": "presets/4.3/filters/basic_no_rpm_clean.txt",
@@ -6159,6 +6366,32 @@
         "EVO"
       ],
       "author": "sugarK",
+      "priority": 1000000
+    },
+    {
+      "fullPath": "presets/4.3/vtx/Unify_Pro32_DP_SA2_1.txt",
+      "hash": "d36ffaa5dafae8765431653192f8aa19a1d769f16b1c6385607659130d6d229a",
+      "title": "TBS Unify Pro32 DP SA 2.1",
+      "firmware_version": [
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "2025.12",
+        "2026.6"
+      ],
+      "category": "VTX",
+      "status": "COMMUNITY",
+      "keywords": [
+        "vtx",
+        "vtx table",
+        "tbs",
+        "unify",
+        "pro32",
+        "DP",
+        "SA 2.1"
+      ],
+      "author": "andybrwr",
       "priority": 1000000
     },
     {
