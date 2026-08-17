@@ -1,0 +1,14 @@
+[tools]
+node = "24"
+
+[tasks.verify]
+description = "Validate all presets"
+run = "node indexer/check.js"
+
+[tasks.index]
+description = "Generate index.json and index_hash.txt"
+run = "node indexer/indexer.js"
+
+[tasks.build]
+description = "Run verify (and --deploy stages artifacts to public/)"
+run = "bash scripts/build.sh"

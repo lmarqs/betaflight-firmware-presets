@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#MISE description="Generate index.json and index_hash.txt"
+set -e
+
+node indexer/indexer.js

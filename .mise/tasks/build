@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#MISE description="Verify presets and build artifacts for deployment"
+#USAGE flag "--deploy" help="Run the full build with deployment artifacts"
+set -e
+
+if [ "$usage_deploy" = "true" ]; then
+  ./scripts/build.sh deploy
+else
+  ./scripts/build.sh
+fi
