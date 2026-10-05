@@ -1,0 +1,40 @@
+#$ TITLE: lmarqs Modes
+#$ FIRMWARE_VERSION: 4.3
+#$ FIRMWARE_VERSION: 4.4
+#$ FIRMWARE_VERSION: 4.5
+#$ FIRMWARE_VERSION: 2025.12
+#$ CATEGORY: MODES
+#$ STATUS: COMMUNITY
+#$ KEYWORDS: modes, aux, switch, arm, angle, horizon, prearm, lmarqs
+#$ AUTHOR: lmarqs
+#$ DESCRIPTION: lmarqs mode switch assignments.
+#$ DESCRIPTION: - ARM on AUX1 high (1700-2100)
+#$ DESCRIPTION: - ARM on AUX4 high (1700-2100)
+#$ DESCRIPTION: - ANGLE on AUX3 high (1700-2100)
+#$ DESCRIPTION: - HORIZON on AUX3 mid (1300-1700)
+#$ DESCRIPTION: - LEDLOW on AUX2 low (900-1600)
+#$ DESCRIPTION: - FLIP OVER AFTER CRASH on AUX4 high (1700-2100)
+#$ DESCRIPTION: - PREARM on AUX5 high (1700-2100)
+
+#$ INCLUDE: presets/4.3/modes/defaults.txt
+
+# ARM on AUX1 high
+aux 0 0 0 1700 2100 0 0
+
+# ARM on AUX4 high
+aux 1 0 3 1700 2100 0 0
+
+# ANGLE on AUX3 high
+aux 2 1 2 1700 2100 0 0
+
+# HORIZON on AUX3 mid
+aux 3 2 2 1300 1700 0 0
+
+# LEDLOW on AUX2 low
+aux 4 15 1 900 1600 0 0
+
+# FLIP OVER AFTER CRASH on AUX4 high
+aux 5 35 3 1700 2100 0 0
+
+# PREARM on AUX5 high
+aux 8 36 4 1700 2100 0 0
