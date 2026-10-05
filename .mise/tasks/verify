@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#MISE description="Validate all presets"
+set -e
+
+node indexer/check.js
